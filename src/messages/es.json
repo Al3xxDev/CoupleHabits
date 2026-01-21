@@ -98,6 +98,10 @@
         "emailLabel": "Correo Electrónico",
         "codeLabel": "Código de Verificación",
         "verifying": "Verificando...",
-        "backToLogin": "Volver al inicio"
+        "backToLogin": "Volver al inicio",
+        "continue": "Continuar",
+        "sentTo": "Código enviado a {email}",
+        "change": "Cambiar",
+        "verify": "Verificar"
     }
 }

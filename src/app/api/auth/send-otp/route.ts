@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
-// Initialize Supabase (Service Role preferred for backend, but Anon works if RLS allows)
-// Actually, for verification_codes write, we need permission.
-// Existing supabase client is client-side. Let's make a new one or use env vars directly.
+// Initialize Supabase
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
     try {
@@ -51,29 +51,53 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Failed to generate code' }, { status: 500 });
         }
 
-        // 5. Send Email via Resend
-        // 5. Send Email via Resend
-        // DEV MODE: Log the code so we can login correctly even if email fails (Free tier limits)
-
-
+        // 5. Send Email (Gmail first, then Resend)
         try {
-            const { error: resendError } = await resend.emails.send({
-                from: 'CoupleHabits <onboarding@resend.dev>', // Verified domain or test domain
-                to: email, // Will fail for unverified emails on free tier
-                subject: 'Your Login Code',
-                html: `<p>Your code is <strong>${code}</strong></p>`
-            });
+            if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
+                // Gmail (Free, unlimited recipients)
+                const transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: process.env.GMAIL_USER,
+                        pass: process.env.GMAIL_APP_PASSWORD,
+                    },
+                });
 
-            if (resendError) {
-                console.warn('[Send-OTP] Resend Warning (probably free tier limit):', resendError.message);
-                // We DON'T return error here, so the UI proceeds to the input code screen.
-                // The user can grab the code from the terminal.
+                await transporter.sendMail({
+                    from: process.env.GMAIL_USER, // Simplified sender
+                    to: email,
+                    subject: `Your Login Code: ${code}`, // DEBUG: Put code in subject
+                    text: `Your login code is: ${code}`, // Text fallback
+                    html: `<div style="font-family: sans-serif; padding: 20px;">
+                            <h2>Welcome back!</h2>
+                            <p>Your login code is:</p>
+                            <h1 style="font-size: 32px; letter-spacing: 5px;">${code}</h1>
+                            <p>This code expires in 10 minutes.</p>
+                           </div>`,
+                });
+                console.log(`[Send-OTP] Sent via Gmail to ${email}`);
+
+            } else if (resend) {
+                // Resend (Requires verified domain for external emails on free tier)
+                const { error: resendError } = await resend.emails.send({
+                    from: process.env.RESEND_FROM_EMAIL || 'CoupleHabits <onboarding@resend.dev>',
+                    to: email,
+                    subject: 'Your Login Code',
+                    html: `<p>Your code is <strong>${code}</strong></p>`
+                });
+
+                if (resendError) {
+                    console.warn('[Send-OTP] Resend Error:', resendError.message);
+                } else {
+                    console.log(`[Send-OTP] Sent via Resend to ${email}`);
+                }
+            } else {
+                console.warn('[Send-OTP] No email provider configured. Check server logs for code.');
             }
-        } catch (emailError) {
-            console.warn('[Send-OTP] Email failed silently for dev:', emailError);
-        }
 
-        return NextResponse.json({ success: true });
+        } catch (emailError: any) {
+            console.error('[Send-OTP] Email failed:', emailError);
+        }
 
         return NextResponse.json({ success: true });
 

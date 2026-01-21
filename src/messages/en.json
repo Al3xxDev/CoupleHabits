@@ -99,6 +99,10 @@
         "codeLabel": "Verification Code",
         "verifyButton": "Verify Code",
         "verifying": "Verifying...",
-        "backToLogin": "Back to login"
+        "backToLogin": "Back to login",
+        "continue": "Continue",
+        "sentTo": "Code sent to {email}",
+        "change": "Change",
+        "verify": "Verify"
     }
 }
