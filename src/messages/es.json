@@ -1,0 +1,74 @@
+{
+    "Common": {
+        "loading": "Cargando...",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "close": "Cerrar"
+    },
+    "Dashboard": {
+        "greeting": "Hola, {name}",
+        "partnerGreeting": " y {partnerName}",
+        "waitingForPartner": "Esperando pareja...",
+        "shareCode": "Compartir código: {code}",
+        "noGoals": "Aún no hay hábitos. ¡Empieza a crear uno!",
+        "goalsTitle": "Tus Hábitos",
+        "createGoal": "Nuevo Hábito",
+        "daysTogether": "{count} Días Juntos"
+    },
+    "GoalForm": {
+        "newTitle": "Nuevo Hábito",
+        "editTitle": "Editar Hábito",
+        "newSubtitle": "Creen mejores hábitos juntos o solos",
+        "editSubtitle": "Haz cambios en tu hábito",
+        "titleLabel": "¿Qué quieres lograr?",
+        "titlePlaceholder": "ej. Correr por la mañana",
+        "descriptionPlaceholder": "Añade una descripción (opcional)",
+        "scopeLabel": "¿Para quién es esto?",
+        "scopePersonal": "Solo Yo",
+        "scopeCouple": "Juntos",
+        "frequencyLabel": "¿Con qué frecuencia?",
+        "frequencyDaily": "Todos los días",
+        "frequencyWeekly": "Una vez a la semana",
+        "trackingTypeLabel": "¿Cómo seguir el progreso?",
+        "typeBoolean": "Completado",
+        "typeBooleanDesc": "Simple Sí / No",
+        "typeCount": "Valor Numérico",
+        "typeCountDesc": "Repeticiones, minutos o páginas",
+        "targetValueLabel": "Valor Objetivo Diario",
+        "submitCreate": "Crear Hábito",
+        "submitEdit": "Guardar Cambios",
+        "submitSaving": "Guardando..."
+    },
+    "GoalCard": {
+        "together": "Juntos",
+        "streak": "{count}",
+        "daily": "Diario",
+        "weekly": "Semanal",
+        "youCompleted": "Completaste esto, espera a tu pareja",
+        "partnerCompleted": "{name} completó esto"
+    },
+    "InviteCode": {
+        "waitingTitle": "Esperando Pareja",
+        "shareInstructions": "Comparte este código con tu pareja para vincular sus cuentas.",
+        "copied": "¡Copiado al portapapeles!"
+    },
+    "Settings": {
+        "title": "Configuración de Perfil",
+        "fullName": "Nombre Completo",
+        "displayName": "Nombre para Mostrar",
+        "language": "Idioma",
+        "logout": "Cerrar Sesión",
+        "changePhoto": "Cambiar Foto",
+        "editPhoto": "Editar Foto"
+    },
+    "Auth": {
+        "loginTitle": "Bienvenido de nuevo",
+        "loginSubtitle": "Inicia sesión para restaurar tus hábitos.",
+        "emailLabel": "Correo Electrónico",
+        "codeLabel": "Código de Verificación",
+        "verifying": "Verificando...",
+        "backToLogin": "Volver al inicio"
+    }
+}

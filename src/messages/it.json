@@ -1,0 +1,75 @@
+{
+    "Common": {
+        "loading": "Caricamento...",
+        "save": "Salva",
+        "cancel": "Annulla",
+        "delete": "Elimina",
+        "edit": "Modifica",
+        "close": "Chiudi"
+    },
+    "Dashboard": {
+        "greeting": "Ciao, {name}",
+        "partnerGreeting": " e {partnerName}",
+        "waitingForPartner": "In attesa del partner...",
+        "shareCode": "Codice: {code}",
+        "noGoals": "Nessuna abitudine. Inizia a crearne una!",
+        "goalsTitle": "Le Tue Abitudini",
+        "createGoal": "Nuova Abitudine",
+        "daysTogether": "{count} Giorni Insieme"
+    },
+    "GoalForm": {
+        "newTitle": "Nuova Abitudine",
+        "editTitle": "Modifica Abitudine",
+        "newSubtitle": "Migliorate le abitudini insieme o da soli",
+        "editSubtitle": "Modifica la tua abitudine",
+        "titleLabel": "Cosa vuoi ottenere?",
+        "titlePlaceholder": "es. Corsa mattutina",
+        "descriptionPlaceholder": "Aggiungi una descrizione (opzionale)",
+        "scopeLabel": "Per chi è?",
+        "scopePersonal": "Solo per me",
+        "scopeCouple": "Insieme",
+        "frequencyLabel": "Ogni quanto?",
+        "frequencyDaily": "Ogni giorno",
+        "frequencyWeekly": "Una volta a settimana",
+        "trackingTypeLabel": "Come tracciare?",
+        "typeBoolean": "Completamento",
+        "typeBooleanDesc": "Semplice Sì / No",
+        "typeCount": "Valore Numerico",
+        "typeCountDesc": "Ripetizioni, minuti o pagine",
+        "targetValueLabel": "Obiettivo Giornaliero",
+        "submitCreate": "Crea Abitudine",
+        "submitEdit": "Salva Modifiche",
+        "submitSaving": "Salvataggio..."
+    },
+    "GoalCard": {
+        "together": "Insieme",
+        "streak": "{count}",
+        "daily": "Giornaliero",
+        "weekly": "Settimanale",
+        "youCompleted": "Hai completato, attendi il partner",
+        "partnerCompleted": "{name} ha completato"
+    },
+    "InviteCode": {
+        "waitingTitle": "In Attesa del Partner",
+        "shareInstructions": "Condividi questo codice con il partner per collegare gli account.",
+        "copied": "Copiato negli appunti!"
+    },
+    "Settings": {
+        "title": "Impostazioni Profilo",
+        "fullName": "Nome Completo",
+        "displayName": "Nome Visualizzato",
+        "language": "Lingua",
+        "logout": "Esci",
+        "changePhoto": "Cambia Foto",
+        "editPhoto": "Modifica Foto"
+    },
+    "Auth": {
+        "loginTitle": "Bentornato",
+        "loginSubtitle": "Accedi per ripristinare le abitudini.",
+        "emailLabel": "Email",
+        "codeLabel": "Codice di Verifica",
+        "verifyButton": "Verifica Codice",
+        "verifying": "Verifica...",
+        "backToLogin": "Torna al login"
+    }
+}

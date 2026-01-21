@@ -1,0 +1,75 @@
+{
+    "Common": {
+        "loading": "Loading...",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "close": "Close"
+    },
+    "Dashboard": {
+        "greeting": "Hello, {name}",
+        "partnerGreeting": " & {partnerName}",
+        "waitingForPartner": "Waiting for partner...",
+        "shareCode": "Share code: {code}",
+        "noGoals": "No habits yet. Start building one!",
+        "goalsTitle": "Your Habits",
+        "createGoal": "New Habit",
+        "daysTogether": "{count} Days Together"
+    },
+    "GoalForm": {
+        "newTitle": "New Habit",
+        "editTitle": "Edit Habit",
+        "newSubtitle": "Build better habits together or alone",
+        "editSubtitle": "Make changes to your habit",
+        "titleLabel": "What do you want to achieve?",
+        "titlePlaceholder": "e.g. Morning Jog",
+        "descriptionPlaceholder": "Add a description (optional)",
+        "scopeLabel": "Who is this for?",
+        "scopePersonal": "Just Me",
+        "scopeCouple": "Us Together",
+        "frequencyLabel": "How often?",
+        "frequencyDaily": "Every Day",
+        "frequencyWeekly": "Once a Week",
+        "trackingTypeLabel": "How to track progress?",
+        "typeBoolean": "Completion",
+        "typeBooleanDesc": "Simple Yes / No checklist",
+        "typeCount": "Numeric Value",
+        "typeCountDesc": "Track iterations, minutes, or pages",
+        "targetValueLabel": "Daily Target Value",
+        "submitCreate": "Create Habit",
+        "submitEdit": "Save Changes",
+        "submitSaving": "Saving..."
+    },
+    "GoalCard": {
+        "together": "Together",
+        "streak": "{count}",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "youCompleted": "You completed this, wait for partner",
+        "partnerCompleted": "{name} completed this"
+    },
+    "InviteCode": {
+        "waitingTitle": "Waiting for Partner",
+        "shareInstructions": "Share this code with your partner to link your accounts.",
+        "copied": "Copied to clipboard!"
+    },
+    "Settings": {
+        "title": "Profile Settings",
+        "fullName": "Full Name",
+        "displayName": "Display Name",
+        "language": "Language",
+        "logout": "Log Out",
+        "changePhoto": "Change Photo",
+        "editPhoto": "Edit Photo"
+    },
+    "Auth": {
+        "loginTitle": "Welcome Back",
+        "loginSubtitle": "Log in to restore your habits.",
+        "emailLabel": "Email Address",
+        "codeLabel": "Verification Code",
+        "verifyButton": "Verify Code",
+        "verifying": "Verifying...",
+        "backToLogin": "Back to login"
+    }
+}
