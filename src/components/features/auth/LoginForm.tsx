@@ -64,7 +64,10 @@ export function LoginForm({ onLoginSuccess, onCancel }: LoginFormProps) {
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-6 z-50 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative overflow-hidden flex flex-col items-center">
+                <div className="w-20 h-20 bg-gray-100 rounded-2xl mb-6 shadow-sm overflow-hidden">
+                    <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
+                </div>
                 <button onClick={onCancel} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
                     ✕
                 </button>

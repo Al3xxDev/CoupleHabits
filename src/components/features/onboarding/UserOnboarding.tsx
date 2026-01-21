@@ -107,6 +107,11 @@ export function UserOnboarding({ onComplete }: UserOnboardingProps) {
 
     return (
         <div className="p-6 flex flex-col justify-center h-full max-w-md mx-auto w-full overflow-y-auto">
+            <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-gray-100 rounded-2xl shadow-sm overflow-hidden">
+                    <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
+                </div>
+            </div>
             <h1 className="text-2xl font-bold mb-2">{t('welcome')}</h1>
             <p className="text-neutral-500 mb-8">{t('subtitle')}</p>
 
